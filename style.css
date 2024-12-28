@@ -1,0 +1,143 @@
+body{
+    /* how to add background color and why? */
+    background-color: antiquewhite;
+}
+
+/* why below has been addded you did not see any changes */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    /* what does a flex do? all things is coming in a line */
+ display: flex;
+ /* what about alining to cetre? */
+ align-items: center;
+ /* if i want do not show dot before home and about? */
+ list-style-type: none;
+ height: 65px;
+ background-color: black;
+ /* to change colour of texts */
+ color: white;
+}
+/* how to give spacing between spotify home and about? */
+nav ul li{
+  padding: 0 12px;
+
+}
+
+/* how to change size of image logo so that it fit blue line */
+
+.brand img{
+    /* first 24 and then inspect and then for 55 it is good so change to that */
+width: 55px;
+/* to have distance between logo img and spotify written? */
+padding: 0 8px;
+}
+
+.brand{
+    /* what dos it mean by flex box?
+    without this what was the problem? */
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+/* how to make buttom black and have a box type */
+.buttom{
+     /* what does it mean by sticky? */
+    position: sticky;
+    bottom: 0;
+    /* to give width to buttom */
+    height: 130px;
+    background-color: black;
+    color: white;
+    /* why did buttom 0 did not work */
+    /* bottom: 0; */
+    /* is it because container has no height? */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* how to move icon to below of myprogreass? */
+    flex-direction: column;
+    
+}
+
+/* how to make spacing between icons and progreas bar */
+.icons{
+    margin-top: 14px;
+}
+
+/* to make icons seem putting hands on that */
+.icons i{
+    cursor: pointer;
+}
+
+.container{
+    min-height: 72vh;
+ /* above means 75 percentage of height */
+    background-color: black;
+    color: white;
+    display: flex;
+    margin: 23px auto;
+    width: 75%;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url('music2.jpg');
+    background-size: 100%; /* Scale the background image to 75% of the container size */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the container */
+}
+
+/* why hash not .? */
+#myProgressbar{
+    width:80vw;
+    /* text-align: center; */
+    /*why twxt aling centre only did not work? */
+    /* so can you make buttom flex box? */
+
+    /* how to make pointer for progressor? */
+    cursor: pointer;
+
+}
+.songItemcontainer{
+    margin-top: 50px;
+}
+.songItem{
+    height: 50px;
+    /* can you now say what does flex do? */
+    display: flex;
+    background-color: white;
+    /* width: 100%; */
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.songItem img{
+    width: 43px;
+    margin: 20px 0;
+    border-radius: 34px;
+}
+
+.timestamp{
+   margin: 0 23px;
+
+}
+.timestamp i{
+    cursor: pointer;
+}
+.songInfo{
+    position: absolute;
+    /* left: 0; */
+    left: 10vw;
+}
+/* how to make gfg only work during playing */
+.songInfo img{
+    opacity: 0;
+    /* transition: opacity 1s ease-in; */
+    transition: opacity 0.4s ease-in;
+}
